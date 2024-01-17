@@ -54,12 +54,46 @@
                                         </div>
                                         <div class="mb-3">
                                             <center>
-                                                <button type="reset" class="btn btn-danger mx-5">Batal</button>
-                                                <button type="submit" class="btn btn-success mx-5">Login</button>
+                                                <button type="reset" class="btn btn-danger mx-2">Batal</button>
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#infoLogin">
+                                                    Info Login
+                                                </button>
+                                                <button type="submit" class="btn btn-success mx-2">Login</button>
                                             </center>
                                         </div>
                                     </form>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="infoLogin" tabindex="-1" aria-labelledby="infoLoginLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="infoLoginLabel">Informasi Login</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <tr>
+                                    <td>Email</td>
+                                    <td>admin@demo.co.id</td>
+                                </tr>
+                                <br>
+                                <tr>
+                                    <td>Password</td>
+                                    <td>rahasia</td>
+                                </tr>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                             </div>
                         </div>
                     </div>

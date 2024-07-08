@@ -6,7 +6,7 @@
     <div class="card">
         <div class="card-body">
             <div class="row">
-                <div class="col-xl-4 col-md-6">
+                <div class="col-xl-4 col-md-6 mb-2">
                     <div class="card-body bg-info">
                         <center>
                             <b>Info Stok BBM</b>
@@ -38,12 +38,17 @@
                         <br>
                         @php
                             $tgl = date('Y-m-d');
-                            $pajaks = App\Models\Pajak::select('nopol', DB::raw('DATEDIFF(jatuh_tempo, "' . $tgl . '") AS interval_tgl'))->get();
+                            $pajaks = App\Models\Pajak::select(
+                                'nopol',
+                                DB::raw('DATEDIFF(jatuh_tempo, "' . $tgl . '") AS interval_tgl'),
+                            )->get();
                             foreach ($pajaks as $pajak) {
                                 $nopol = $pajak->nopol;
                                 if ($pajak->interval_tgl < 0) {
                                     echo '<div class="alert alert-danger" role="alert">';
-                                    echo 'Kendaraan dengan No Polisi <b>' . $nopol . '</b> sudah melewati batas Jatuh Tempo!!';
+                                    echo 'Kendaraan dengan No Polisi <b>' .
+                                        $nopol .
+                                        '</b> sudah melewati batas Jatuh Tempo!!';
                                     echo '</div>';
                                 } elseif ($pajak->interval_tgl == 0) {
                                     echo '<div class="alert alert-danger" role="alert">';
@@ -55,7 +60,11 @@
                                     echo '</div>';
                                 } elseif ($pajak->interval_tgl >= 2 and $pajak->interval_tgl < 8) {
                                     echo '<div class="alert alert-danger" role="alert">';
-                                    echo 'Kendaraan dengan No Polisi <b>' . $nopol . '</b> Jatuh Tempo ' . $pajak->interval_tgl . ' hari lagi.';
+                                    echo 'Kendaraan dengan No Polisi <b>' .
+                                        $nopol .
+                                        '</b> Jatuh Tempo ' .
+                                        $pajak->interval_tgl .
+                                        ' hari lagi.';
                                     echo '</div>';
                                 }
                             }

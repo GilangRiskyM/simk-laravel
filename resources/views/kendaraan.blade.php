@@ -16,43 +16,45 @@
             <a href="/kendaraan_tambah" class="btn btn-primary">Tambah</a>
         </div>
         <div class="card-body">
-            <table class="table table-responsive table-bordered table-hover" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>No.</th>
-                        <th>No. Polisi</th>
-                        <th>Merek</th>
-                        <th>Jenis Kendaraan</th>
-                        <th>Nama Pegawai</th>
-                        <th>NIP</th>
-                        <th>Jabatan</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($kendaraan as $data)
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" width="100%" cellspacing="0">
+                    <thead>
                         <tr>
-                            <td>{{ $no++ }}</td>
-                            <td>{{ $data->nopol }}</td>
-                            <td>{{ $data->merek }}</td>
-                            <td>{{ $data->jenis_kendaraan }}</td>
-                            <td>{{ $data->nama_pegawai }}</td>
-                            <td>{{ $data->nip }}</td>
-                            <td>{{ $data->jabatan }}</td>
-                            <td>
-                                <center>
-                                    <a href="kendaraan_edit/{{ $data->id }}" class="btn btn-warning mx-2 my-2">
-                                        <i class='bx bxs-edit'></i> Edit
-                                    </a>
-                                    <a href="kendaraan_hapus/{{ $data->id }}" class="btn btn-danger mx-2 my-2">
-                                        <i class='bx bxs-trash'></i> Hapus
-                                    </a>
-                                </center>
-                            </td>
+                            <th>No.</th>
+                            <th>No. Polisi</th>
+                            <th>Merek</th>
+                            <th>Jenis Kendaraan</th>
+                            <th>Nama Pegawai</th>
+                            <th>NIP</th>
+                            <th>Jabatan</th>
+                            <th>Aksi</th>
                         </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach ($kendaraan as $data)
+                            <tr>
+                                <td>{{ $no++ }}</td>
+                                <td>{{ $data->nopol }}</td>
+                                <td>{{ $data->merek }}</td>
+                                <td>{{ $data->jenis_kendaraan }}</td>
+                                <td>{{ $data->nama_pegawai }}</td>
+                                <td>{{ $data->nip }}</td>
+                                <td>{{ $data->jabatan }}</td>
+                                <td>
+                                    <center>
+                                        <a href="kendaraan_edit/{{ $data->id }}" class="btn btn-warning mx-2 my-2">
+                                            <i class='bx bxs-edit'></i> Edit
+                                        </a>
+                                        <a href="kendaraan_hapus/{{ $data->id }}" class="btn btn-danger mx-2 my-2">
+                                            <i class='bx bxs-trash'></i> Hapus
+                                        </a>
+                                    </center>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 @endsection

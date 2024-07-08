@@ -38,7 +38,6 @@ function tgl_indonesia3($date)
     $tahun      = substr($date, 0, 4);
     $bulan      = substr($date, 5, 2);
     $tgl     = substr($date, 8, 2);
-    $hari     = date("w", strtotime($date));
 
     $result = $tgl . " " . $Bulan[(int)$bulan - 1] . " " . $tahun . "";
     return $result;

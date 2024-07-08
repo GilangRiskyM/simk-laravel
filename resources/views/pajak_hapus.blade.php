@@ -42,10 +42,10 @@
                         <td>Keterangan</td>
                         <td>:</td>
                         <td>
-                            @if ($data->keterangan == '')
+                            @if ($pajak->keterangan == '')
                                 -
                             @else
-                                {{ $data->keterangan }}
+                                {{ $pajak->keterangan }}
                             @endif
                         </td>
                     </tr>

@@ -28,7 +28,7 @@ class MasukController extends Controller
         $idbbm = $request['id_bbm'];
         $jumlah = $request['jumlah'];
         $cekstok = StokBBM::where('id', $idbbm)->get(); //panggil data dari tabel stok_bbm
-        $stoksekarang = $cekstok->value('stok'); //ambil nilai atrribute stok dari tabel stok_bbm
+        $stoksekarang = $cekstok->value('stok'); //ambil nilai attribute stok dari tabel stok_bbm
         $tambahstok = $stoksekarang + $jumlah;
         $sqlbbm = StokBBM::findorFail($idbbm);
         $updatestok = $sqlbbm->update(['stok' => $tambahstok]);

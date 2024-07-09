@@ -39,10 +39,10 @@
                                 <td>{{ tgl_indonesia2($data->created_at) }}</td>
                                 <td>
                                     <center>
-                                        <a href="masuk_edit/{{ $data->id }}" class="btn btn-warning mx-2 my-2">
+                                        <a href="/masuk_edit/{{ $data->id }}" class="btn btn-warning mx-2 my-2">
                                             <i class='bx bxs-edit'></i> Edit
                                         </a>
-                                        <a href="masuk_hapus/{{ $data->id }}" class="btn btn-danger mx-2 my-2">
+                                        <a href="/masuk_hapus/{{ $data->id }}" class="btn btn-danger mx-2 my-2">
                                             <i class='bx bxs-trash'></i> Hapus
                                         </a>
                                     </center>

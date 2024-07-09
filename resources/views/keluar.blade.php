@@ -14,7 +14,7 @@
     @endif
     <div class="card">
         <div class="card-header">
-            <a href="keluar_tambah_bbm" class="btn btn-primary">Tambah Pengeluaran</a>
+            <a href="/keluar_tambah_bbm" class="btn btn-primary">Tambah Pengeluaran</a>
             <hr>
             <div class="my-2 col-12 col-sm-8 col-md-4">
                 <label for="" class="mb-2">Cari Data</label>
@@ -85,13 +85,14 @@
                                 <td>{{ tgl_indonesia2($data->created_at) }}</td>
                                 <td>
                                     <center>
-                                        <a href="keluar_edit/{{ $data->id }}" class="btn btn-warning mx-2 my-2">
+                                        <a href="/keluar_edit/{{ $data->id }}" class="btn btn-warning mx-2 my-2">
                                             <i class="bx bxs-edit"></i> Edit
                                         </a>
-                                        <a href="keluar_hapus/{{ $data->id }}" class="btn btn-danger mx-2 my-2">
+                                        <a href="/keluar_hapus/{{ $data->id }}" class="btn btn-danger mx-2 my-2">
                                             <i class="bx bxs-trash"></i> Hapus
                                         </a>
-                                        <a href="surat_tugas_tambah/{{ $data->id }}" class="btn btn-primary mx-2 my-2">
+                                        <a href="/surat_tugas_tambah/{{ $data->id }}"
+                                            class="btn btn-primary mx-2 my-2">
                                             <i class='bx bx-envelope'></i> Tambah Surat Tugas
                                         </a>
                                     </center>

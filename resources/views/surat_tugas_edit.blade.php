@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('title', 'Edit Pengeluaran BBM')
+@section('title', 'Edit Surat Tugas')
 @section('content')
     <div class="card my-4">
         <div class="card-header">

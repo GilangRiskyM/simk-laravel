@@ -93,18 +93,18 @@
                                 <td>Rp. {{ $data->nilai_voucher }},- / {{ $data->jumlah_bbm }} liter</td>
                                 <td>
                                     <center>
-                                        <a href="surat_tugas_edit/{{ $data->id }}" target="_blank"
+                                        <a href="/surat_tugas_edit/{{ $data->id }}" target="_blank"
                                             class="btn btn-warning mx-2 my-2">
                                             <i class="bx bxs-edit"></i> Edit
                                         </a>
-                                        <a href="surat_tugas_hapus/{{ $data->id }}" class="btn btn-danger mx-2 my-2">
+                                        <a href="/surat_tugas_hapus/{{ $data->id }}" class="btn btn-danger mx-2 my-2">
                                             <i class="bx bxs-trash"></i> Hapus
                                         </a>
-                                        <a href="cetak_surat/{{ $data->id }}" target="_blank"
+                                        <a href="/cetak_surat/{{ $data->id }}" target="_blank"
                                             class="btn btn-info mx-2 my-2">
                                             <i class='bx bxs-printer'></i> Surat Tugas
                                         </a>
-                                        <a href="cetak_voucher/{{ $data->id }}" class="btn btn-info mx-2 my-2">
+                                        <a href="/cetak_voucher/{{ $data->id }}" class="btn btn-info mx-2 my-2">
                                             <i class='bx bxs-printer'></i> Voucher BBM
                                         </a>
                                     </center>

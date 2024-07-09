@@ -42,10 +42,10 @@
                                 <td>{{ $data->jabatan }}</td>
                                 <td>
                                     <center>
-                                        <a href="kendaraan_edit/{{ $data->id }}" class="btn btn-warning mx-2 my-2">
+                                        <a href="/kendaraan_edit/{{ $data->id }}" class="btn btn-warning mx-2 my-2">
                                             <i class='bx bxs-edit'></i> Edit
                                         </a>
-                                        <a href="kendaraan_hapus/{{ $data->id }}" class="btn btn-danger mx-2 my-2">
+                                        <a href="/kendaraan_hapus/{{ $data->id }}" class="btn btn-danger mx-2 my-2">
                                             <i class='bx bxs-trash'></i> Hapus
                                         </a>
                                     </center>
